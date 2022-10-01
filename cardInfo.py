@@ -13,7 +13,7 @@ class CardInfo:
     def __repr__(self):
         return self.name
     def __str__(self):
-        self.name
+        return self.name
 
 def cardJsonToCardInfo(card):
     return CardInfo(card['name'], card['id'], card['type'], card['desc'], card['card_images'][0]['image_url'], card.get('attribute'), card.get('level'), card.get('race'))

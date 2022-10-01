@@ -10,9 +10,9 @@ def create_pack_image(pack):
     images = []
     for card in pack:
         images.append(Image.open(BytesIO(imagemanager.get_image(card))))
-    #Displays up to 15 cards
-    image = Image.new("RGB", (imageWidth*5,imageHeight*3))
-    for y in range(0,imageHeight*3,imageHeight):
+    #Displays up to 20 cards
+    image = Image.new("RGB", (imageWidth*5,imageHeight*4))
+    for y in range(0,imageHeight*4,imageHeight):
         for x in range(0,imageWidth*5,imageWidth):
             if len(images) == 0:
                 break
